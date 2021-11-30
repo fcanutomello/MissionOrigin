@@ -66,23 +66,23 @@ body{
     
 }
 
-.divider-1{
+.divider-1 {
     height: 1px;
-    background: linear-gradient( 
-        270deg,
-        hsla((var(--hue)), 36%, 57%, 1),    
-        hsla((var(--hue)), 65%, 88%, 0.34)
-        );
-    };
-
-    .divider-2{
-        height: 1px;
-        background: linear-gradient( 
-            270deg,
-            hsla((var(--hue)), 65%, 88%, 0.34),
-            hsla((var(--hue)), 36%, 57%, 1)   
-            );
-        };
+    background: linear-gradient(
+      270deg,
+      hsla(var(--hue), 36%, 57%, 1),
+      hsla(var(--hue), 65%, 88%, 0.34)
+    );
+  }
+  
+  .divider-2 {
+    height: 1px;
+    background: linear-gradient(
+      270deg,
+      hsla(var(--hue), 65%, 88%, 0.34),
+      hsla(var(--hue), 36%, 57%, 1)
+    );
+  }
     
     /********** LAYOUT **********/
     
@@ -220,7 +220,7 @@ nav.show ul.grid{
     color: var(--base-color);
     font-size: 1.5rem;
     cursor: pointer;
-    margin-left: 13.9rem;
+    margin-right: -20rem;
 }
 
 nav .icon-close {
@@ -444,8 +444,35 @@ nav.show div.icon-close{
   }
 
   .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-    bottom: -193rem;
+    bottom: -200rem;
     left: 0;
     width: 100%;
-    
+}
+
+/********** CONTACT **********/
+#contact .grid{
+    gap: 2rem;
+}
+
+#contact .text p{
+    margin-bottom: 2rem;
+}
+
+#contact .button i, 
+#contact ul li i{
+    font-size: 1.5rem;
+    margin-right: 0.625rem;
+}
+
+#contact ul.grid{
+    gap: 1rem;
+}
+
+#contact ul li{
+    display: flex;
+    align-items: center;
+}
+
+#contact ul li i{
+    color: var(--base-color);
 }
