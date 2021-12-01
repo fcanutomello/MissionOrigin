@@ -15,16 +15,16 @@ for(const link of links){
     })
 }
 
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
+function changeHeaderWhenScroll(){
+    const header = document.querySelector('#header')
+    const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', function(){
     if(window.scrollY >= navHeight) {
         header.classList.add('scroll')
     } else {
         header.classList.remove('scroll')
     }
-})
+}
 
 /*Testimonials slider */
 const swiper = new Swiper('.swiper-container', {
@@ -55,3 +55,19 @@ const scrollReveal = ScrollReveal({
     { interval: 100 }
   )
 
+/* back to top button */
+function backToTop(){
+    const BackToTopButton = document.querySelector('.back-to-top')
+
+    if (this.scrollY >= 560) {
+        BackToTopButton.classList.add('show')
+    } else {
+        BackToTopButton.classList.remove('show')
+    }
+}
+
+/* When scrolls */
+window.addEventListener('scroll', function(){    
+    changeHeaderWhenScroll()
+    backToTop()
+})
